@@ -57,7 +57,7 @@ export default function Home() {
         <div className="flex items-start justify-end w-[70%]">
           <Image
             alt="Banner"
-            src="/images/hero.png "
+            src="/images/hero.png"
             width={600}
             height={600}
             className="w-fit h-full"
