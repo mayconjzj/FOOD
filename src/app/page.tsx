@@ -7,9 +7,9 @@ import { Link } from '@/components/ui/Link';
 export default function Home() {
   return (
     <main>
-      <section className="flex min-h-[calc(100vh-100px)] relative">
-        <div className="bg-muted w-[50%] h-full absolute rounded-tl-[40%] rounded-tr-[30%] rounded-bl-[20%] top-0 right-0 -z-10"></div>
-        <div className="w-[45%] flex flex-col gap-7 mt-[5%]">
+      <section className="flex md:min-h-[calc(100vh-100px)] relative min-h-full pt-0 md:pt-2">
+        <div className="hidden md:block bg-muted w-[50%] h-full absolute rounded-tl-[40%] rounded-tr-[30%] rounded-bl-[20%] top-0 right-0 -z-10"></div>
+        <div className="text-center md:text-left items-center md:items-start w-full md:w-[45%] flex flex-col gap-7 mt-[5%]">
           <h1 className="text-[4rem] leading-snug font-black">
             O Sabor que vai até <span className="text-secundary">você</span>
           </h1>
@@ -25,10 +25,10 @@ export default function Home() {
             <Button asChild>
               <Link href="#">Ver Cardápio</Link>
             </Button>
-            <Button variant="secundary">
+            <Button asChild variant="secundary">
               <Link href="tel:+5555555555555">
-                <Button asChild className="mr-2">
-                  <i className="fas fa-phone"></i>
+                <Button className="hidden sm:block shadow-none">
+                  <i className="fas fa-phone hidden"></i>
                 </Button>
                 (55) 55555-5555
               </Link>
@@ -54,14 +54,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex items-start justify-end w-[70%]">
+        <div className="hidden md:flex items-start justify-end w-[70%]">
           <Image
             alt="Banner"
             src="/images/hero.png"
             width={600}
             height={600}
             unoptimized
-            className="w-fit h-full"
+            priority
+            className="hidden md:block w-fit h-full"
           />
         </div>
       </section>
