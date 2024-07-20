@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { Button } from '@/components/ui/Button';
 import { DishCard } from '@/components/ui/DishCard/DishCard';
-import { Feedback } from '@/components/ui/Feedback/Feedback';
+import { Feedback } from '@/components/ui/Feedbackm/Feedback';
 import { Link } from '@/components/ui/Link';
 import { RateStars } from '@/components/ui/RateStars';
 import { SocialButtons } from '@/components/ui/SocialButtons';
