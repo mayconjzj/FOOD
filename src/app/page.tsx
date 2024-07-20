@@ -1,13 +1,19 @@
 import Image from 'next/image';
-import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 import { Button } from '@/components/ui/Button';
+import { DishCard } from '@/components/ui/DishCard/DishCard';
+import { FeedBack } from '@/components/ui/FeedBack/FeedBack';
 import { Link } from '@/components/ui/Link';
+import { RateStars } from '@/components/ui/RateStars';
+import { SocialButtons } from '@/components/ui/SocialButtons';
 
 export default function Home() {
   return (
     <main>
-      <section className="flex md:min-h-[calc(100vh-100px)] relative min-h-full pt-0 md:pt-2">
+      <section
+        id="home"
+        className="flex md:min-h-[calc(100vh-100px)] relative min-h-full pt-0 md:pt-2"
+      >
         <div className="hidden md:block bg-muted w-[50%] h-full absolute rounded-tl-[40%] rounded-tr-[30%] rounded-bl-[20%] top-0 right-0 -z-10"></div>
         <div className="text-center md:text-left items-center md:items-start w-full md:w-[45%] flex flex-col gap-7 mt-[5%]">
           <h1 className="text-[4rem] leading-snug font-black">
@@ -25,10 +31,14 @@ export default function Home() {
             <Button asChild>
               <Link href="#">Ver Cardápio</Link>
             </Button>
-            <Button asChild variant="secundary">
+            <Button
+              asChild
+              variant="secundary"
+              className="flex gap-2 items-center justify-center"
+            >
               <Link href="tel:+5555555555555">
                 <Button className="hidden sm:block shadow-none">
-                  <i className="fas fa-phone hidden"></i>
+                  <i className="fas fa-phone hidden" />
                 </Button>
                 (55) 55555-5555
               </Link>
@@ -36,25 +46,11 @@ export default function Home() {
           </div>
 
           <div className="flex gap-[18px]">
-            <Button asChild variant="secundary">
-              <Link href="wa.me/+5555555555555">
-                <FaWhatsapp size={25} />
-              </Link>
-            </Button>
-            <Button asChild variant="secundary">
-              <Link href="instagram.com">
-                <FaInstagram size={25} />
-              </Link>
-            </Button>
-            <Button asChild variant="secundary">
-              <Link href="facebook.com">
-                <FaFacebook size={25} />
-              </Link>
-            </Button>
+            <SocialButtons />
           </div>
         </div>
 
-        <div className="hidden md:flex items-start justify-end w-[70%]">
+        <div className="hidden md:flex items-center justify-end w-[70%]">
           <Image
             alt="Banner"
             src="/images/hero.png"
@@ -62,8 +58,142 @@ export default function Home() {
             height={600}
             unoptimized
             priority
-            className="hidden md:block w-fit h-full"
+            className="hidden md:block min-w-[300px]"
           />
+        </div>
+      </section>
+
+      <section
+        id="menu"
+        className="flex flex-col items-center justify-center min-h-screen"
+      >
+        <h2>Cardápio</h2>
+        <h3 className="text-center">Nossos pratros especiais</h3>
+
+        <div className="w-full flex flex-wrap justify-center gap-3 mt-8">
+          <DishCard.Root favorite>
+            <DishCard.Image src="/images/dish.png" alt="Dish" />
+            <DishCard.Title>Lorem Ipsum</DishCard.Title>
+            <DishCard.Description>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias esse vel tenetur animi iure error, minus voluptatem
+              perspiciatis, eveniet nisi quidem facilis? Exercitationem
+              asperiores dolore doloremque corporis distinctio eligendi tempora.
+            </DishCard.Description>
+            <div className="flex gap-1">
+              <RateStars number={5} /> (+500)
+            </div>
+            <DishCard.Price price={19.89} />
+          </DishCard.Root>
+
+          <DishCard.Root favorite>
+            <DishCard.Image src="/images/dish2.png" alt="Dish" />
+            <DishCard.Title>Lorem Ipsum</DishCard.Title>
+            <DishCard.Description>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias esse vel tenetur animi iure error, minus voluptatem
+              perspiciatis, eveniet nisi quidem facilis? Exercitationem
+              asperiores dolore doloremque corporis distinctio eligendi tempora.
+            </DishCard.Description>
+            <div className="flex gap-1">
+              <RateStars number={5} /> (+500)
+            </div>
+            <DishCard.Price price={19.89} />
+          </DishCard.Root>
+
+          <DishCard.Root favorite>
+            <DishCard.Image src="/images/dish3.png" alt="Dish" />
+            <DishCard.Title>Lorem Ipsum</DishCard.Title>
+            <DishCard.Description>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias esse vel tenetur animi iure error, minus voluptatem
+              perspiciatis, eveniet nisi quidem facilis? Exercitationem
+              asperiores dolore doloremque corporis distinctio eligendi tempora.
+            </DishCard.Description>
+            <div className="flex gap-1">
+              <RateStars number={5} /> (+500)
+            </div>
+            <DishCard.Price price={19.89} />
+          </DishCard.Root>
+
+          <DishCard.Root favorite>
+            <DishCard.Image src="/images/dish4.png" alt="Dish" />
+            <DishCard.Title>Lorem Ipsum</DishCard.Title>
+            <DishCard.Description>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias esse vel tenetur animi iure error, minus voluptatem
+              perspiciatis, eveniet nisi quidem facilis? Exercitationem
+              asperiores dolore doloremque corporis distinctio eligendi tempora.
+            </DishCard.Description>
+            <div className="flex gap-1">
+              <RateStars number={5} /> (+500)
+            </div>
+            <DishCard.Price price={19.89} />
+          </DishCard.Root>
+        </div>
+      </section>
+
+      <section
+        id="testmonials"
+        className="min-h-[calc(100vh-100px)] flex flex-col md:flex-row items-center justify-center gap-12"
+      >
+        <Image
+          alt="chef"
+          src="/images/chef.png"
+          width={617}
+          height={761}
+          className="max-w-[500px] hidden lg:block"
+        />
+
+        <div className="w-full md:w-3/4 lg:w-1/2 flex flex-col items-center">
+          <h2>Depoimentos</h2>
+          <h3 className="text-3xl md:text-4xl text-center">
+            O que os clientes falam sobre nós
+          </h3>
+
+          <div className="flex flex-col gap-5 my-8 space-y-2">
+            <FeedBack.Root>
+              <FeedBack.Avatar alt="avatar" src="/images/avatar.png" />
+
+              <FeedBack.Content>
+                <FeedBack.Name>
+                  Fulana de Tal
+                  <span>
+                    <RateStars number={5} />
+                  </span>
+                </FeedBack.Name>
+                <FeedBack.Description>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit molestias consectetur consequuntur, possimus deleniti
+                  pariatur autem sint? Minima perspiciatis quae, corrupti
+                  distinctio earum minus voluptatem? Voluptate neque iusto
+                  nostrum vitae.
+                </FeedBack.Description>
+              </FeedBack.Content>
+            </FeedBack.Root>
+
+            <FeedBack.Root>
+              <FeedBack.Avatar alt="avatar" src="/images/avatar.png" />
+
+              <FeedBack.Content>
+                <FeedBack.Name>
+                  Fulana de Tal
+                  <span>
+                    <RateStars number={5} />
+                  </span>
+                </FeedBack.Name>
+                <FeedBack.Description>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit molestias consectetur consequuntur, possimus deleniti
+                  pariatur autem sint? Minima perspiciatis quae, corrupti
+                  distinctio earum minus voluptatem? Voluptate neque iusto
+                  nostrum vitae.
+                </FeedBack.Description>
+              </FeedBack.Content>
+            </FeedBack.Root>
+          </div>
+
+          <Button>Ver mais avaliações</Button>
         </div>
       </section>
     </main>

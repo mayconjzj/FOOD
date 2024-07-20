@@ -11,7 +11,7 @@
     --primary-foreground: #f8d477;
     --secundary: #e9a209;
     
-    --tertiary: #fffff;
+    --tertiary: #ffffff;
     --tertiary-foreground: #f4f4f4;
     
     --muted: #fcedc2;
@@ -24,6 +24,30 @@
   }
 
   section {
-    padding: 28px 8%;
+    @apply py-7 px-[8%];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-secundary text-3xl;
+  }
+
+  h3 {
+    @apply text-4xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  h6 {
+    @apply text-sm;
   }
 }

@@ -4,13 +4,11 @@ import { Slot } from '@radix-ui/react-slot';
 import { VariantProps, tv } from 'tailwind-variants';
 
 export const ButtonVariants = tv({
-  base: 'flex gap-2 items-center justify-center',
+  base: 'rounded-xl shadow-lg duration-150',
   variants: {
     variant: {
-      primary:
-        'bg-primary rounded-xl font-semibold shadow-lg hover:bg-primary-foreground duration-150',
-      secundary:
-        'bg-tertiary shadow-lg rounded-xl hover:bg-tertiary-foreground duration-150',
+      primary: 'bg-primary font-semibold hover:bg-primary-foreground',
+      secundary: 'bg-tertiary hover:bg-tertiary-foreground ',
       icon: ''
     },
     size: {
