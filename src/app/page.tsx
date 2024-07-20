@@ -1,8 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 
 import { Button } from '@/components/ui/Button';
 import { DishCard } from '@/components/ui/DishCard/DishCard';
-import { FeedBack } from '@/components/ui/FeedBack/FeedBack';
+import { Feedback } from '@/components/ui/Feedback/Feedback';
 import { Link } from '@/components/ui/Link';
 import { RateStars } from '@/components/ui/RateStars';
 import { SocialButtons } from '@/components/ui/SocialButtons';
@@ -14,8 +16,8 @@ export default function Home() {
         id="home"
         className="flex md:min-h-[calc(100vh-100px)] relative min-h-full pt-0 md:pt-2"
       >
-        <div className="hidden md:block bg-muted w-[50%] h-full absolute rounded-tl-[40%] rounded-tr-[30%] rounded-bl-[20%] top-0 right-0 -z-10"></div>
-        <div className="text-center md:text-left items-center md:items-start w-full md:w-[45%] flex flex-col gap-7 mt-[5%]">
+        <div className="reveal-right hidden md:block bg-muted w-[50%] h-full absolute rounded-tl-[40%] rounded-tr-[30%] rounded-bl-[20%] top-0 right-0 -z-10"></div>
+        <div className="reveal-left text-center md:text-left items-center md:items-start w-full md:w-[45%] flex flex-col gap-7 mt-[5%]">
           <h1 className="text-[4rem] leading-snug font-black">
             O Sabor que vai até <span className="text-secundary">você</span>
           </h1>
@@ -31,11 +33,7 @@ export default function Home() {
             <Button asChild>
               <Link href="#">Ver Cardápio</Link>
             </Button>
-            <Button
-              asChild
-              variant="secundary"
-              className="flex gap-2 items-center justify-center"
-            >
+            <Button asChild variant="secundary">
               <Link href="tel:+5555555555555">
                 <Button className="hidden sm:block shadow-none">
                   <i className="fas fa-phone hidden" />
@@ -58,7 +56,7 @@ export default function Home() {
             height={600}
             unoptimized
             priority
-            className="hidden md:block min-w-[300px]"
+            className="reveal-feedback-root hidden md:block min-w-[300px]"
           />
         </div>
       </section>
@@ -70,7 +68,7 @@ export default function Home() {
         <h2>Cardápio</h2>
         <h3 className="text-center">Nossos pratros especiais</h3>
 
-        <div className="w-full flex flex-wrap justify-center gap-3 mt-8">
+        <div className="reveal-left w-full flex flex-wrap justify-center gap-3 mt-8">
           <DishCard.Root favorite>
             <DishCard.Image src="/images/dish.png" alt="Dish" />
             <DishCard.Title>Lorem Ipsum</DishCard.Title>
@@ -134,7 +132,7 @@ export default function Home() {
       </section>
 
       <section
-        id="testmonials"
+        id="testimonials"
         className="min-h-[calc(100vh-100px)] flex flex-col md:flex-row items-center justify-center gap-12"
       >
         <Image
@@ -142,7 +140,7 @@ export default function Home() {
           src="/images/chef.png"
           width={617}
           height={761}
-          className="max-w-[500px] hidden lg:block"
+          className="reveal-left max-w-[500px] hidden lg:block"
         />
 
         <div className="w-full md:w-3/4 lg:w-1/2 flex flex-col items-center">
@@ -152,45 +150,45 @@ export default function Home() {
           </h3>
 
           <div className="flex flex-col gap-5 my-8 space-y-2">
-            <FeedBack.Root>
-              <FeedBack.Avatar alt="avatar" src="/images/avatar.png" />
+            <Feedback.Root className="reveal-right">
+              <Feedback.Avatar alt="avatar" src="/images/avatar.png" />
 
-              <FeedBack.Content>
-                <FeedBack.Name>
+              <Feedback.Content>
+                <Feedback.Name>
                   Fulana de Tal
                   <span>
                     <RateStars number={5} />
                   </span>
-                </FeedBack.Name>
-                <FeedBack.Description>
+                </Feedback.Name>
+                <Feedback.Description>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Suscipit molestias consectetur consequuntur, possimus deleniti
                   pariatur autem sint? Minima perspiciatis quae, corrupti
                   distinctio earum minus voluptatem? Voluptate neque iusto
                   nostrum vitae.
-                </FeedBack.Description>
-              </FeedBack.Content>
-            </FeedBack.Root>
+                </Feedback.Description>
+              </Feedback.Content>
+            </Feedback.Root>
 
-            <FeedBack.Root>
-              <FeedBack.Avatar alt="avatar" src="/images/avatar.png" />
+            <Feedback.Root className="reveal-right">
+              <Feedback.Avatar alt="avatar" src="/images/avatar.png" />
 
-              <FeedBack.Content>
-                <FeedBack.Name>
+              <Feedback.Content>
+                <Feedback.Name>
                   Fulana de Tal
                   <span>
                     <RateStars number={5} />
                   </span>
-                </FeedBack.Name>
-                <FeedBack.Description>
+                </Feedback.Name>
+                <Feedback.Description>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Suscipit molestias consectetur consequuntur, possimus deleniti
                   pariatur autem sint? Minima perspiciatis quae, corrupti
                   distinctio earum minus voluptatem? Voluptate neque iusto
                   nostrum vitae.
-                </FeedBack.Description>
-              </FeedBack.Content>
-            </FeedBack.Root>
+                </Feedback.Description>
+              </Feedback.Content>
+            </Feedback.Root>
           </div>
 
           <Button>Ver mais avaliações</Button>

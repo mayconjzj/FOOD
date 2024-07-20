@@ -1,4 +1,4 @@
-export const FeedBackContent = ({
+export const FeedbackContent = ({
   children
 }: {
   children: React.ReactNode;

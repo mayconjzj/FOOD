@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import { ImgHTMLAttributes } from 'react';
 
-export type FeedBackAvatar = ImgHTMLAttributes<HTMLImageElement> & {
+export type FeedbackAvatar = ImgHTMLAttributes<HTMLImageElement> & {
   alt: string;
   src: string;
 };
 
-export const FeedBackAvatar = ({ alt, src }: FeedBackAvatar) => {
+export const FeedbackAvatar = ({ alt, src }: FeedbackAvatar) => {
   return (
     <Image
       alt={alt}

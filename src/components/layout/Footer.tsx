@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { SocialButtons } from './ui/SocialButtons';
+import { SocialButtons } from '../ui/SocialButtons';
 
 export const Footer = () => {
   return (
@@ -15,10 +15,7 @@ export const Footer = () => {
 
       <div className="flex flex-col gap-2 md:flex-row items-center justify-between pb-7 px-[8%]">
         <span className="font-medium text-xl">&copy; 2024 Maycon Douglas</span>
-
-        <div className="flex gap-2">
-          <SocialButtons />
-        </div>
+        <SocialButtons />
       </div>
     </footer>
   );

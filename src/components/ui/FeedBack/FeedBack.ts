@@ -1,13 +1,13 @@
-import { FeedBackAvatar } from './FeedBackAvatar';
-import { FeedBackContent } from './FeedBackContent';
-import { FeedBackDescription } from './FeedBackDescription';
-import { FeedBackName } from './FeedBackName';
-import { FeedBackRoot } from './FeedBackRoot';
+import { FeedbackAvatar } from './FeedbackAvatar';
+import { FeedbackContent } from './FeedbackContent';
+import { FeedbackDescription } from './FeedbackDescription';
+import { FeedbackName } from './FeedbackName';
+import { FeedbackRoot } from './FeedbackRoot';
 
-export const FeedBack = {
-  Root: FeedBackRoot,
-  Avatar: FeedBackAvatar,
-  Content: FeedBackContent,
-  Name: FeedBackName,
-  Description: FeedBackDescription
+export const Feedback = {
+  Root: FeedbackRoot,
+  Avatar: FeedbackAvatar,
+  Content: FeedbackContent,
+  Name: FeedbackName,
+  Description: FeedbackDescription
 };
