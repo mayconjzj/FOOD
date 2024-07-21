@@ -1,7 +1,8 @@
 import { ButtonHTMLAttributes, forwardRef } from 'react';
 
-import { Slot } from '@radix-ui/react-slot';
 import { VariantProps, tv } from 'tailwind-variants';
+
+import { Slot } from './Slot';
 
 export const ButtonVariants = tv({
   base: 'inline-flex gap-2 items-center justify-center rounded-xl shadow-lg duration-150',

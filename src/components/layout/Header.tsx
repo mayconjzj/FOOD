@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Scrollspy from 'react-scrollspy';
 
 import { Button } from '../shared/Button';
 import { Link } from '../shared/Link';
+import { Scrollspy } from '../shared/Scrollspy';
 
 export const Header = () => {
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
