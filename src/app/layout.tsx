@@ -1,6 +1,6 @@
 import { Poppins } from 'next/font/google';
 
-import { Animate } from '@/components/animations/Animate';
+import { UseScrollReveal } from '@/components/animations/UseScrollReveal';
 import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 
@@ -29,7 +29,7 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
-        <Animate />
+        <UseScrollReveal />
         <Header />
         {children}
         <Footer />

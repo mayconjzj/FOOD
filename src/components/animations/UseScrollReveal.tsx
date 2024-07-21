@@ -2,7 +2,7 @@
 
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
-export const Animate = () => {
+export const UseScrollReveal = () => {
   useScrollReveal([
     {
       target: '.reveal-left',
@@ -26,5 +26,5 @@ export const Animate = () => {
     }
   ]);
 
-  return <></>;
+  return null;
 };

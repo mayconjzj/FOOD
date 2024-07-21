@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa';
 
-import { Button } from './Button';
+import { Button } from '../shared/Button';
 
 export const SocialButtons = () => {
   return (

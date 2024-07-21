@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-import { Button } from '@/components/ui/Button';
-import { DishCard } from '@/components/ui/DishCard/DishCard';
-import { Feedback } from '@/components/ui/Feedback/Feedback';
-import { Link } from '@/components/ui/Link';
-import { RateStars } from '@/components/ui/RateStars';
-import { SocialButtons } from '@/components/ui/SocialButtons';
+import { SocialButtons } from '@/components/layout/SocialButtons';
+import { Button } from '@/components/shared/Button';
+import { DishCard } from '@/components/shared/DishCard/DishCard';
+import { Feedback } from '@/components/shared/Feedback/Feedback';
+import { Link } from '@/components/shared/Link';
+import { RateStars } from '@/components/shared/RateStars';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         id="home"
         className="flex md:min-h-[calc(100vh-100px)] relative min-h-full pt-0 md:pt-2"
       >
-        <div className="reveal-right hidden md:block bg-muted w-[50%] h-full absolute rounded-tl-[40%] rounded-tr-[30%] rounded-bl-[20%] top-0 right-0 -z-10"></div>
+        <div className="hidden md:block bg-muted w-[50%] h-full absolute rounded-tl-[40%] rounded-tr-[30%] rounded-bl-[20%] top-0 right-0 -z-10"></div>
         <div className="reveal-left text-center md:text-left items-center md:items-start w-full md:w-[45%] flex flex-col gap-7 mt-[5%]">
           <h1 className="text-[4rem] leading-snug font-black">
             O Sabor que vai até <span className="text-secundary">você</span>

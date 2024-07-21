@@ -1,15 +1,21 @@
 import { useEffect } from 'react';
 
 import { RevealProps } from '@/interfaces/IScrollRevealService';
-import { ScrollRevealServiceImpl } from '@/services/ScrollRevealServiceImpl';
 
 export type UseScrollRevealProps = RevealProps;
 
 export const useScrollReveal = (targets: RevealProps[]) => {
   useEffect(() => {
-    const scrollReveal = new ScrollRevealServiceImpl();
-    targets.forEach(({ target, config }) => {
-      scrollReveal.reveal({ target, config });
-    });
+    const loadScrollReveal = async () => {
+      const { ScrollRevealServiceImpl } = await import(
+        '@/services/ScrollRevealServiceImpl'
+      );
+      const ScrollReveal = new ScrollRevealServiceImpl();
+
+      targets.forEach(({ target, config }) => {
+        ScrollReveal.reveal({ target, config });
+      });
+    };
+    loadScrollReveal();
   }, [targets]);
 };

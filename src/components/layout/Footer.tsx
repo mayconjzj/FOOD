@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { SocialButtons } from '../ui/SocialButtons';
+import { SocialButtons } from './SocialButtons';
 
 export const Footer = () => {
   return (

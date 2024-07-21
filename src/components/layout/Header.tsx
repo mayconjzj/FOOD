@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 
-import { Button } from '../ui/Button';
-import { Link } from '../ui/Link';
+import { Button } from '../shared/Button';
+import { Link } from '../shared/Link';
 
 export const Header = () => {
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
