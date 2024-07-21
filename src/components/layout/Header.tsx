@@ -62,7 +62,7 @@ export const Header = () => {
       >
         <Scrollspy
           items={['home', 'menu', 'testimonials']}
-          currentClassName="is-current"
+          currentClassName="border-b-[3px] border-b-primary"
           className="flex flex-col gap-3 text-center"
         >
           <li>
