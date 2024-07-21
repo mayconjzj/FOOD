@@ -66,8 +66,8 @@ export default function Home() {
         <h2>Cardápio</h2>
         <h3 className="text-center">Nossos pratros especiais</h3>
 
-        <div className="reveal-left w-full flex flex-wrap justify-center gap-3 mt-8">
-          <DishCard.Root favorite>
+        <div className="w-full flex flex-wrap justify-center gap-3 mt-8">
+          <DishCard.Root favorite className="reveal-left">
             <DishCard.Image src="/images/dish.png" alt="Dish" />
             <DishCard.Title>Lorem Ipsum</DishCard.Title>
             <DishCard.Description>
@@ -82,7 +82,7 @@ export default function Home() {
             <DishCard.Price price={19.89} />
           </DishCard.Root>
 
-          <DishCard.Root favorite>
+          <DishCard.Root favorite className="reveal-left">
             <DishCard.Image src="/images/dish2.png" alt="Dish" />
             <DishCard.Title>Lorem Ipsum</DishCard.Title>
             <DishCard.Description>
@@ -97,7 +97,7 @@ export default function Home() {
             <DishCard.Price price={19.89} />
           </DishCard.Root>
 
-          <DishCard.Root favorite>
+          <DishCard.Root favorite className="reveal-left">
             <DishCard.Image src="/images/dish3.png" alt="Dish" />
             <DishCard.Title>Lorem Ipsum</DishCard.Title>
             <DishCard.Description>
@@ -112,7 +112,7 @@ export default function Home() {
             <DishCard.Price price={19.89} />
           </DishCard.Root>
 
-          <DishCard.Root favorite>
+          <DishCard.Root favorite className="reveal-left">
             <DishCard.Image src="/images/dish4.png" alt="Dish" />
             <DishCard.Title>Lorem Ipsum</DishCard.Title>
             <DishCard.Description>
