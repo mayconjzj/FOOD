@@ -2,7 +2,7 @@
 
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
-export const UseScrollReveal = () => {
+export const ScrollReveal = () => {
   useScrollReveal([
     {
       target: '.reveal-left',

@@ -24,7 +24,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`w-full px-[8%] py-5 sticky top-0 bg-background z-10 ${scrollActive ? 'shadow-sm' : 'shadow-none'}`}
+      className={`w-full px-[8%] py-5 sticky top-0 bg-background z-10 ${scrollActive && 'shadow-sm'}`}
     >
       <nav className="w-full flex items-center justify-between">
         <i className="fas fa-burger text-2xl text-primary"> FOOD</i>
