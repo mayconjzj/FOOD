@@ -1,15 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Button } from '../shared/Button';
 import { Link } from '../shared/Link';
 
 export const Header = () => {
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
+  const [scrollActive, setScrollActive] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY > 0 ? setScrollActive(true) : setScrollActive(false);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="w-full px-[8%] py-[28px] sticky top-0 bg-background z-10">
+    <header
+      className={`w-full px-[8%] py-5 sticky top-0 bg-background z-10 duration-300 ${scrollActive ? 'shadow-sm' : 'shadow-none'}`}
+    >
       <nav className="w-full flex items-center justify-between">
         <i className="fas fa-burger text-2xl text-primary"> FOOD</i>
 
@@ -40,7 +53,7 @@ export const Header = () => {
       </nav>
 
       <div
-        className={`md:hidden duration-300 fixed right-0 w-full py-2 bg-background space-y-3 flex flex-col items-center z-10 object-cover ${mobileMenuActive ? 'visible opacity-100' : 'invisible opacity-0'}`}
+        className={`md:hidden duration-300 shadow-sm fixed right-0 w-full py-4 bg-background space-y-3 flex flex-col items-center z-10 object-cover ${mobileMenuActive ? 'visible opacity-100' : 'invisible opacity-0'}`}
       >
         <ul className="flex flex-col gap-3 text-center">
           <li>
